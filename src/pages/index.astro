@@ -1,0 +1,261 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import ticketXImage from '../assets/ticketX.png';
+import supHomeImage from 'https://supportivehomeserviceswi.com/assets/suphome.5ae2a324.png'
+import NavBar from '../components/NavBar.astro';
+const date = new Date();
+let day = date.getDay();
+let dayString = 
+	day == 1    ? "Monday":
+	day == 2    ? "Tuesday":
+	day == 3    ? "Wednesday":
+	day == 4    ? "Thursday":
+	day == 5    ? "Friday":
+	day == 6    ? "Saturday":
+	"Sunday";
+
+let hour = date.getHours();
+let timeOfDay =
+	hour < 4  ? "Night": 
+	hour < 12 ? "Morning":
+	hour < 18 ? "Afternoon":
+	hour < 22 ? "Evening":
+	"Night"
+---
+
+<Layout title="Welcome to Astro.">
+	<NavBar/>
+	<main>
+		
+		<section id="about">
+			<section id="greeting">
+				<h1 >Hello! My name is Joseph Balsavich and I am a software engineer currently located in the Twin Cities. I am hoping you are having a good {dayString} <span>{timeOfDay}</span></h1>
+
+			</section>
+			<section id="other">
+				
+				
+			</section>
+		</section>
+		<section class="text-gradient" id="skills">
+			<section class="vert" id="programming-languages">
+				<h2>Main Programming Languages</h2>
+				<p>
+					<a href="https://docs.microsoft.com/en-us/cpp/?view=msvc-170" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/c-colored.svg" width="36" height="36" alt="C" /></a>
+					<a href="https://docs.microsoft.com/en-us/cpp/?view=msvc-170" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/cplusplus-colored.svg" width="36" height="36" alt="C++" /></a>
+					<a href="https://www.oracle.com/java/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg" width="36" height="36" alt="Java" /></a>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" /></a>
+					<a href="https://www.python.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" width="36" height="36" alt="Python" /></a>
+					<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="TypeScript" /></a>	
+				</p>
+			</section>
+			<section id="web-frameworks">
+				<h2>Main Web Technologies</h2>
+				<p>
+					<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
+					<a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
+					<a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /></a>
+					<a href="https://www.solidjs.com/" target="_blank" rel="noreferrer"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20166%20155.3'%3e%3cpath%20d='M163%2035S110-4%2069%205l-3%201c-6%202-11%205-14%209l-2%203-15%2026%2026%205c11%207%2025%2010%2038%207l46%209%2018-30z'%20fill='%2376b3e1'/%3e%3clinearGradient%20id='a'%20gradientUnits='userSpaceOnUse'%20x1='27.5'%20y1='3'%20x2='152'%20y2='63.5'%3e%3cstop%20offset='.1'%20stop-color='%2376b3e1'/%3e%3cstop%20offset='.3'%20stop-color='%23dcf2fd'/%3e%3cstop%20offset='1'%20stop-color='%2376b3e1'/%3e%3c/linearGradient%3e%3cpath%20d='M163%2035S110-4%2069%205l-3%201c-6%202-11%205-14%209l-2%203-15%2026%2026%205c11%207%2025%2010%2038%207l46%209%2018-30z'%20opacity='.3'%20fill='url(%23a)'/%3e%3cpath%20d='M52%2035l-4%201c-17%205-22%2021-13%2035%2010%2013%2031%2020%2048%2015l62-21S92%2026%2052%2035z'%20fill='%23518ac8'/%3e%3clinearGradient%20id='b'%20gradientUnits='userSpaceOnUse'%20x1='95.8'%20y1='32.6'%20x2='74'%20y2='105.2'%3e%3cstop%20offset='0'%20stop-color='%2376b3e1'/%3e%3cstop%20offset='.5'%20stop-color='%234377bb'/%3e%3cstop%20offset='1'%20stop-color='%231f3b77'/%3e%3c/linearGradient%3e%3cpath%20d='M52%2035l-4%201c-17%205-22%2021-13%2035%2010%2013%2031%2020%2048%2015l62-21S92%2026%2052%2035z'%20opacity='.3'%20fill='url(%23b)'/%3e%3clinearGradient%20id='c'%20gradientUnits='userSpaceOnUse'%20x1='18.4'%20y1='64.2'%20x2='144.3'%20y2='149.8'%3e%3cstop%20offset='0'%20stop-color='%23315aa9'/%3e%3cstop%20offset='.5'%20stop-color='%23518ac8'/%3e%3cstop%20offset='1'%20stop-color='%23315aa9'/%3e%3c/linearGradient%3e%3cpath%20d='M134%2080a45%2045%200%2000-48-15L24%2085%204%20120l112%2019%2020-36c4-7%203-15-2-23z'%20fill='url(%23c)'/%3e%3clinearGradient%20id='d'%20gradientUnits='userSpaceOnUse'%20x1='75.2'%20y1='74.5'%20x2='24.4'%20y2='260.8'%3e%3cstop%20offset='0'%20stop-color='%234377bb'/%3e%3cstop%20offset='.5'%20stop-color='%231a336b'/%3e%3cstop%20offset='1'%20stop-color='%231a336b'/%3e%3c/linearGradient%3e%3cpath%20d='M114%20115a45%2045%200%2000-48-15L4%20120s53%2040%2094%2030l3-1c17-5%2023-21%2013-34z'%20fill='url(%23d)'/%3e%3c/svg%3e" width="36" height="36" alt="SolidJS" /></a>
+					<a href="https://vitejs.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="36" height="36" alt="Vite" /></a>
+					<a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" width="36" height="36" alt="NodeJS" /></a>
+				</p>
+				
+			</section>
+			<section id="miscellaneous">
+				<h2>Miscellaneous Technologies</h2>
+				<p>
+					<a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/visualstudiocode.svg" width="36" height="36" alt="VS Code" /></a>
+					<a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" width="36" height="36" alt="Figma" /></a>
+					<a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg" width="36" height="36" alt="Docker" /></a>
+					<a href="https://www.amp.dev/" target="_blank" rel="noreferrer"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/amp-icon.svg" width="36" height="36" alt="Docker" /></a>
+					
+					<a href="https://www.linux.org" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/linux-colored.svg" width="36" height="36" alt="Linux" /></a>
+					
+				</p>
+			</section>
+		</section>
+		<section class="projects">
+			<h1>Projects</h1>
+			<p>
+				<Card 
+					href="https://www.figma.com/file/K1W5NX0G7qQiNtNLeHMpL6/5115-Prototype" 
+					title="TicketX"
+					imgSrc={ticketXImage.src}
+					imgH='360'
+					imgW='480'
+					imgAlt="TicketXLogo"
+					>
+				</Card>
+				<Card 
+					href="https://supportivehomeserviceswi.com" 
+					title="Supportive Home Services (website)"
+					imgSrc="https://supportivehomeserviceswi.com/assets/suphome.5ae2a324.png"
+					imgH='360'
+					imgW='480'
+					imgAlt="TicketXLogo"
+					>
+				</Card>
+				<Card 
+					href="https://hub.docker.com/repository/docker/jbalsavich/drone_sim/general"
+					title="Drone Package Simulator"
+					imgSrc="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
+					imgH='360'
+					imgW='480'
+					imgAlt="TicketXLogo"
+					>
+				</Card>
+
+				<Card 
+					href="https://docs.google.com/document/d/1e8iCW7eQeuNV0odgqhjzAC_vHh0U8_ga54LdpP1Igp8/"
+					title="PDR for Mars Drone Project"
+					imgSrc="https://c0.klipartz.com/pngpicture/865/224/gratis-png-iconos-de-la-computadora-google-docs-google.png"
+					imgH='360'
+					imgW='480'
+					imgAlt="GoogleDocLinkLogo"
+					>
+				</Card>
+				
+			</p>
+		</section>
+
+		<section class="work-experience">
+			<h1>Work Experiences</h1>
+			<p>
+				
+				<Card 
+				href="https://www.superonefoods.com/store-details/park-falls-super-one-foods"
+				title="Super One Foods"
+				title2='2019-2022'
+				imgSrc="https://mcusercontent.com/17ebc6b7e66f83a6da61ba974/images/2f7d9d1a-65f1-93ba-4a20-dd81f0df5ef4.jpg"
+				imgH='360'
+				imgW='480'
+				imgAlt="SuperOneFoodsLogo"
+				>
+			</Card>
+			<Card 
+				href="https://www.walmart.com/store/3404-roseville-mn"
+				title="Walmart"
+				title2='2023-Present'
+				imgSrc="https://revcycleintelligence.com/images/site/features/WalmartLogo.jpg"
+				imgH='360'
+				imgW='480'
+				imgAlt="GoogleDocLinkLogo"
+				>
+			</Card>
+
+			</p>
+		</section>
+		<footer>
+			<a href="https://github.com"><div class="info">This Website Was Made with Astro</div></a>
+			
+		</footer>
+	</main>
+	
+</Layout>
+
+<script>
+	function changeColumnColor(column,color) {		
+		var cols = Array.from(document.getElementsByClassName(column) as HTMLCollectionOf<HTMLElement>);
+		for(let i=0; i<cols.length; i++) {
+			  cols[i].style.backgroundImage = "var("+color+")";
+		}
+	}
+
+	let hours = ((new Date()).getHours())
+	if(hours < 12)
+	changeColumnColor("text-gradient","--other-gradient")
+
+	
+
+</script>
+<style>
+	@media (max-width: 800px) {
+		main {
+			margin: auto;
+			padding: 1rem;
+			width: 80svw;
+			max-width: calc(100%-2rem);
+			color: #E1F1FF;
+			font-size: 20px;
+			line-height: 1.6;
+			text-align: center;
+		}	
+	}
+	@media (min-width: 800px) {
+		main {
+			margin: auto;
+			padding: 1rem;
+			width: 80svw;
+			color: #E1F1FF;
+			font-size: 20px;
+			line-height: 1.6;
+			text-align: center;
+		}	
+	}
+
+	
+	
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+		
+	}
+
+	footer{
+		background-image: var(--alt-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+		text-decoration: underline;
+	}
+	
+	
+	section{
+		display: inline-grid;
+		grid-row: 1;
+		gap: 2em;
+		width: 100%
+
+	}
+	section h1{
+		font-size: 3rem;
+	}
+	.projects{
+		display: grid;
+		grid-auto-columns: repeat(2, max-content)
+		
+	}
+	
+	section p img{
+		width: 8vw;
+		height: 8vw;
+	}
+	
+	
+	
+	
+
+
+	
+</style>

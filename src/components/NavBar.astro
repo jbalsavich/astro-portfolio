@@ -1,0 +1,100 @@
+---
+name: "NavBar"
+    
+    let profileImage = 'https://lh3.googleusercontent.com/pw/AP1GczOY_82oN0h7l_HfoT4n1a2HINbIQeytU2Gug_JD3Wfpql97ZM67twJDDFHrf3M_AAud056HYnExa5OTLbVdPJAkf4jku11JldB2yOAVbFzgyLdTMuXN88CbLLeI1S7Hweuv1vajUMwweSyy-TtsNWbnWOWfmIMIU3PAcRT0VSb-z8nYmoz2Rr8qdClox1plcCnXglkovAwHUy4qk4Ko5_cLWGIzxX6op0_NkcLdCXTGPtmP9oO8kA6Q9nMpQXVGPpQjj4eRyoW3GsQ-I8Xh83uMDrfpp5vYUU1uE07o9SjVmYBcMdkVoOpwWFPXk32BeImgPCt3iURRMe84GPzvu0JeQaHru2KSSL7Xhc9TqXQb7JfieP2jlI18UrjxMSpscf_WyhsZAYzGZnnVZb2ZNSQwwc7hbrht2jowQw2mFInhDZQZjTRpAAzmUGHEN4_xHEMc_K5V6HDt1JGJu11UiDPQE9s2YIV4xoiJy1cvc3GuLHQaA_q5afa23h0NtDgIcSAvONHH_UXTY59OQSJZjHazH-Y3w2oWvqhgaBFMWbF_LaPsvKIW3O2Ap5AVxAQwZf6-dtuPtij9pQ719peC1Ys0-LpTmQKdLZXkEIEfKzsi7Pj60GTCykMkjiw3NuXjGAtshXf5Wgh3uoJd6TDJENkHjPNxw_JSGLyBCoWMm9OpzsoEHk_4HTvQhcHpNxhzBqYBcRMTKhqu8yWLVdn56EjjdehTVbE1w1VhPxfocnCP-aScodKGIrqx54qzviUKgpOOfmjd1O5OUdepZllcg32Xdr4yhxjC28AYqnNG1_rxuZAG5fqHfW7jZYZ1WN3Ef-38s9-Z9zN6-cvqvNEq2VRnJtjS3-SZxGFYSeZr0_IeoLwUtU9lDQZfsGwkEfmdih1epxj-UJ24fjdbN6xeoYfatNo8bkizWtSOuCWx0fQUn9RpgR460IAn4oFaD8a8npgUzDRuK-S4jb1ITjj9pvIhSJog_fHlVudB3ovbacbxs7mttEQdP_JGxyeQgS0IEA=w200-h200-s-no-gm?authuser=0'
+    let name = 'Joseph Balsavich'
+    let githubLink = 'https://github.com/jbalsavich'
+    let linkedinLink = 'https://linkedin.com/in/joseph-balsavich'
+    let codepenlink = 'https://codepen.io/jbalsavich/'
+
+
+---
+
+<nav class="navbar">
+    <div class="navbar-left">
+        <img src={profileImage} alt="Profile Image" class="profile-image" />
+        <span class="name">{name}</span>
+    </div>
+    
+    <div class="navbar-right">
+        <a href={codepenlink}><img src="https://skillicons.dev/icons?i=codepen" alt="LinkedIn"></img></a>
+        <a href={githubLink}><img src="https://skillicons.dev/icons?i=github" alt="Github"></img></a>
+        <a href={linkedinLink}><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"></img></a>
+        
+    </div>
+</nav>
+
+<style>
+
+    
+    .navbar {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: rgba(19, 21, 26, .5);
+;
+        
+    }
+
+    .navbar-left {
+        display: flex;
+        align-items: center;
+        font-size: 2em;
+        color: #E1F1FF;
+        
+    }
+
+    @media (min-width: 1000px) {
+        .navbar-center{
+            visibility: visible;
+        }
+    }
+    @media (max-width: 1000px) {
+        .navbar-center{
+            visibility: hidden;
+        }
+    }
+    .navbar-center{
+        display: flex;
+        align-items: center;
+        font-size: 2em;
+        background-image: var(--alt-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+    }
+
+    .profile-image {
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .name {
+        font-weight: bold;
+    }
+
+    .navbar-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-right > * + * {
+        margin-left: 10px;
+    }
+
+    .navbar-right a{
+        height: 4em;
+        width: auto;
+    }
+    .navbar-right a img{
+        height: 4em;
+        width: auto;
+    }
+</style>
