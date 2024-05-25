@@ -4,24 +4,6 @@ import Card from '../components/Card.astro';
 import ticketXImage from '../assets/ticketX.png';
 import supHomeImage from 'https://supportivehomeserviceswi.com/assets/suphome.5ae2a324.png'
 import NavBar from '../components/NavBar.astro';
-const date = new Date();
-let day = date.getDay();
-let dayString = 
-	day == 1    ? "Monday":
-	day == 2    ? "Tuesday":
-	day == 3    ? "Wednesday":
-	day == 4    ? "Thursday":
-	day == 5    ? "Friday":
-	day == 6    ? "Saturday":
-	"Sunday";
-
-let hour = date.getHours();
-let timeOfDay =
-	hour < 4  ? "Night": 
-	hour < 12 ? "Morning":
-	hour < 18 ? "Afternoon":
-	hour < 22 ? "Evening":
-	"Night"
 ---
 
 <Layout title="Welcome to Astro.">
@@ -30,7 +12,7 @@ let timeOfDay =
 		
 		<section id="about">
 			<section id="greeting">
-				<h1 >Hello! My name is Joseph Balsavich and I am a software engineer currently located in the Twin Cities. I am hoping you are having a good {dayString} <span>{timeOfDay}</span></h1>
+				<h1 >Hello! My name is Joseph Balsavich and I am a software engineer currently located in the Twin Cities. I am hoping you are having a great <span id="dayString"></span> <span id="timeofDay"></span></h1>
 
 			</section>
 			<section id="other">
@@ -165,6 +147,28 @@ let timeOfDay =
 	let hours = ((new Date()).getHours())
 	if(hours < 12)
 	changeColumnColor("text-gradient","--other-gradient")
+
+	const date = new Date();
+	let day = date.getDay();
+	let dayString = 
+		day == 1    ? "Monday":
+		day == 2    ? "Tuesday":
+		day == 3    ? "Wednesday":
+		day == 4    ? "Thursday":
+		day == 5    ? "Friday":
+		day == 6    ? "Saturday":
+		"Sunday";
+	document.getElementById("dayString").innerHTML = dayString;
+
+	let hour = date.getHours();
+	let timeOfDay =
+		hour < 4  ? "Night": 
+		hour < 12 ? "Morning":
+		hour < 18 ? "Afternoon":
+		hour < 22 ? "Evening":
+		"Night"
+		
+	document.getElementById("timeofDay").innerHTML = timeOfDay;
 
 	
 
